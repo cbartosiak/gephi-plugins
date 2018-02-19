@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+OpenIDE-Module-Name: Complex Generators
+OpenIDE-Module-Short-Description: Scientific graph generators
+OpenIDE-Module-Long-Description: The plugin contains a collection of generators that allow for generating graphs with different topologies.
+OpenIDE-Module-Display-Category: Generator

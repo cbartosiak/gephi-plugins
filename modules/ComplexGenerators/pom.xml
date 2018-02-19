@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- Coordinates -->
+    <groupId>io.github.cbartosiak</groupId>
+    <artifactId>gephi-plugins-complex-generators</artifactId>
+    <version>1.0.0</version>
+    <packaging>nbm</packaging>
+
+    <parent>
+        <groupId>org.gephi</groupId>
+        <artifactId>gephi-plugin-parent</artifactId>
+        <version>0.9.1</version>
+    </parent>
+
+    <!-- Metadata -->
+    <name>Complex Generators</name>
+    <description>
+        The plugin contains a collection of generators that allow for generating
+        graphs with different topologies.
+    </description>
+    <url>
+        https://github.com/cbartosiak/gephi-plugins/tree/complex-generators/modules/ComplexGenerators
+    </url>
+
+    <!-- Licenses -->
+    <licenses>
+        <license>
+            <name>Apache License 2.0</name>
+            <url>https://www.apache.org/licenses/LICENSE-2.0.html</url>
+        </license>
+    </licenses>
+
+    <!-- Developers -->
+    <developers>
+        <developer>
+            <name>Cezary Bartosiak</name>
+            <organizationUrl>https://cbartosiak.github.io</organizationUrl>
+        </developer>
+    </developers>
+
+    <!-- SCM -->
+    <scm>
+        <connection>
+            scm:git:git@github.com:cbartosiak/gephi-plugins.git
+        </connection>
+        <developerConnection>
+            scm:git:git@github.com:cbartosiak/gephi-plugins.git
+        </developerConnection>
+        <url>https://github.com/cbartosiak/gephi-plugins</url>
+    </scm>
+
+    <!-- Issue Management -->
+    <issueManagement>
+        <system>GitHub</system>
+        <url>https://github.com/cbartosiak/gephi-plugins/issues</url>
+    </issueManagement>
+
+    <!-- Properties -->
+    <properties>
+
+        <!-- Maven Compiler Plugin -->
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+
+        <!-- Maven Enforcer Plugin -->
+        <maven-enforcer-plugin.version>3.0.0-M1</maven-enforcer-plugin.version>
+
+        <!-- Maven Resources Plugin -->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <!-- Versions Maven Plugin -->
+        <versions-maven-plugin.version>2.5</versions-maven-plugin.version>
+
+    </properties>
+
+    <!-- Dependencies -->
+    <dependencies>
+
+    </dependencies>
+
+    <!-- Build -->
+    <build>
+        <plugins>
+
+            <!-- Maven Enforcer Plugin -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-enforcer-plugin</artifactId>
+                <version>${maven-enforcer-plugin.version}</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>enforce</goal>
+                        </goals>
+                        <configuration>
+                            <rules>
+                                <requireJavaVersion>
+                                    <version>1.8</version>
+                                </requireJavaVersion>
+                                <requireMavenVersion>
+                                    <version>3.0.5</version>
+                                </requireMavenVersion>
+                            </rules>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <!-- NBM Maven Plugin -->
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>nbm-maven-plugin</artifactId>
+                <configuration>
+                    <licenseName>Apache License 2.0</licenseName>
+                    <licenseFile>LICENSE</licenseFile>
+                    <author>Cezary Bartosiak</author>
+                    <authorUrl>https://cbartosiak.github.io</authorUrl>
+                    <sourceCodeUrl>
+                        https://github.com/cbartosiak/gephi-plugins/tree/complex-generators
+                    </sourceCodeUrl>
+                    <homePageUrl>
+                        https://github.com/cbartosiak/gephi-plugins/tree/complex-generators
+                    </homePageUrl>
+                </configuration>
+            </plugin>
+
+            <!-- Versions Maven Plugin -->
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>versions-maven-plugin</artifactId>
+                <version>${versions-maven-plugin.version}</version>
+            </plugin>
+
+        </plugins>
+    </build>
+</project>
