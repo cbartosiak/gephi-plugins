@@ -8,7 +8,7 @@
     <!-- Coordinates -->
     <groupId>io.github.cbartosiak</groupId>
     <artifactId>gephi-plugins-complex-generators</artifactId>
-    <version>1.0.0</version>
+    <version>2.0.0</version>
     <packaging>nbm</packaging>
 
     <parent>
@@ -20,8 +20,8 @@
     <!-- Metadata -->
     <name>Complex Generators</name>
     <description>
-        The plugin contains a collection of generators that allow for generating
-        graphs with different topologies.
+        The plugin contains a collection of generators
+        that allow for generating graphs with different topologies.
     </description>
     <url>
         https://github.com/cbartosiak/gephi-plugins/tree/complex-generators/modules/ComplexGenerators
